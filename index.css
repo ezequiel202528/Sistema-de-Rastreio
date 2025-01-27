@@ -1,0 +1,49 @@
+@import url(pastaCSS/reset.css);
+@import url(pastaCSS/formulario.css);
+@import url(pastaCSS/MenuDeOpcoes.css);
+@import url(pastaCSS/acessorios.css);
+@import url(pastaCSS/styleModal.css);
+@import url(pastaCSS/tabela.css);
+
+
+
+:root {
+    --azul-padrão: rgb(38, 120, 170);
+    --azul-escuro: blue;
+    --amarelo: yellow;
+    --branco: aliceblue;
+    --vermelho: red;
+    --verde: rgb(81, 209, 81);
+    --cinza-padrão: rgb(92, 94, 92);
+}
+
+
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.divsoria-do-conteudo {
+    display: flex;
+
+
+}
+
+label {
+    font-size: 14px;
+}
+
+select {
+    width: 70px;
+
+}
+
+
+
+
+.resultado {
+    background: var(--vermelho);
+    background: 10px rgb(182, 16, 16);
+    text-align: center;
+}

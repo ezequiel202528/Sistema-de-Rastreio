@@ -1,0 +1,131 @@
+
+*{
+    border:0%;
+    padding:0%;
+    margin: 0%;
+   
+}
+
+
+
+.janela-modal{
+    width: 700px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    left: 350px;
+    position: relative;
+
+}
+
+.fechar{
+    position: relative;
+    top: -25px;
+    right: -635px;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(241, 14, 14);
+    color: aliceblue;
+    border-radius: 50%;
+    border: 0;
+    cursor: pointer;
+}
+
+.modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #131212ad;
+    border-radius: 10px;
+    box-shadow: 2px 2px;
+    z-index: 0;
+    margin: 20px;
+    
+
+}
+
+#modal-cliente{
+    width: 1100px;
+    height: 350px;
+    padding: 10px;
+   
+   
+   
+}
+
+#modal-vendedor{
+    width: 1100px;
+    height: 350px;
+    padding: 10px;
+}
+
+.inputs{
+    width: 95%;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.botao-cadastro{
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px;
+    color: aliceblue;
+    background: rgb(216, 3, 3);
+   
+
+
+}
+
+.Label-vendedor{
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    color: rgba(250, 241, 241, 0.678);
+}
+
+.Label-cliente{
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    color: rgba(236, 226, 226, 0.678);
+}
+
+.classe-do-botao{
+    display: flex;   
+    justify-content: center;
+
+}
+
+
+
+
+
+/* juncão da classe da janela do overlady com a classe criada no java script, isso foi necessario para que quando a classe da janela modal for acionada o conteudo dentro da classe abrir trabalhara em conjunto  */
+
+.janela-modal.abrir{ 
+
+    display: flex;
+}
+
+
+
+
+/* responsavel em fazer o modal abrir suave sem ser seco de mais através dos eixos indicados abaixo */
+
+@keyframes abrirmodal {
+    from{
+        opacity:0;
+        transform: translate3d(0, -20px, -5px);
+    }
+    to{
+
+        opacity:1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+.abrir .modal{
+    animation: abrirmodal 1s;
+}

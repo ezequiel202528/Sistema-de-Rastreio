@@ -1,0 +1,47 @@
+
+
+
+.opcoes{
+    display:flex;
+    width:200px;
+    height: 97.5%;  /* com o vh faz o elemento ocupar 100% do espaço em height */
+    padding: 10px ;
+    background: rgba(104, 105, 104, 0.562);
+    border: solid rgb(26, 10, 10) 2px;  
+    transform: 0.5ms;
+
+}
+
+
+.option{
+    text-decoration: none;
+    padding: 20px;
+    width: 170px;
+    background: rgba(178, 180, 178, 0.562);
+    border: none;
+    font-size: 16px;
+
+}
+
+.option:hover{
+    
+
+    cursor: pointer;
+    background: rgba(221, 228, 221, 0.562);
+
+}
+
+
+.img-cadastro-vendedor{
+    width: 35px;
+    height: 35px;
+}
+
+
+.divisoria-opcoes-menu{
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

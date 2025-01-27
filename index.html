@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>YaSe</title>
+    <link rel="stylesheet" href="pastaCSS/reset.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+
+<body id="sistema">
+
+
+    <section class="divsoria-do-conteudo">
+
+
+        <div>
+
+            <!-- Seção de menus e opções de canto de tela  -->
+
+            <!-- Cadastrar Vendedor -->
+            <!-- Cadastrar Cliente -->
+            <!-- Fechar Ordem de S. -->
+
+            <div class="opcoes" style="display: none;">
+                <div class="divisoria-opcoes-menu">
+                    <img src="img/cadastro.png" alt="" class="img-cadastro-vendedor"><input type="button" class="option"
+                        id="botao-modal" onclick="AbrirModalVendedor()" value="Cadastrar Vendedor">
+                </div>
+                <div class="divisoria-opcoes-menu">
+                    <img src="img/cadastrodecliente.png" alt="" class="img-cadastro-vendedor"><input type="button"
+                        id="botao-modal" class="option" onclick="AbrirModalCliente()" value="Cadastrar Cliente">
+                </div>
+                <div class="divisoria-opcoes-menu">
+                    <img src="img/fechamento.png" alt="" class="img-cadastro-vendedor"><input type="button"
+                        id="botao-modal" class="option" value="Fechar Ordem de S. ">
+                </div>
+
+                <!-- <div class="divisoria-opcoes-menu">
+                <img src="img/fechamento.png" alt="" class="img-cadastro-vendedor"><input type="button" id="botao-modal" class="option" value="Acessorios de Ext.
+                 " >
+            </div> -->
+
+
+                <div class="janela-modal" id="janela-modal-vendedor">
+                    <!--  sera responsavel pelo over lady tela de fundo clara -->
+                    <div class="modal" id="modal-vendedor"> <!--  sera responsavel pela tela pequena do formulário -->
+                        <form action="" method="post">
+
+                            <button class="fechar" id="fechar" type="button">
+                                X
+                            </button>
+
+                            <input type="text" placeholder="Nome" class="inputs">
+                            <input type="text" placeholder="CPF" class="inputs">
+                            <input type="text" placeholder="ID" class="inputs">
+                            <input type="text" placeholder="Contato" class="inputs">
+                            <div class="classe-do-botao">
+                                <button class="botao-cadastro" type="button">Cadastrar</button>
+                            </div>
+                            <div class="Label-vendedor">
+                                <label for="">Cadastro Vendedor</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="janela-modal" id="janela-modal-cliente">
+                    <!--  sera responsavel pelo over lady tela de fundo clara -->
+                    <div class="modal" id="modal-cliente"> <!--  sera responsavel pela tela pequena do formulário -->
+                        <form action="" method="post">
+
+                            <button class="fechar" id="fechar" type="reset">
+                                X
+                            </button>
+
+                            <input type="text" placeholder="Nome" class="inputs">
+                            <input type="text" placeholder="CPF - CNPJ" class="inputs">
+                            <input type="text" placeholder="Endereço" class="inputs">
+                            <input type="text" placeholder="Contato" class="inputs">
+                            <div class="classe-do-botao">
+                                <button class="botao-cadastro" type="button">Cadastrar</button>
+                            </div>
+
+                            <div class="Label-cliente">
+                                <label for="">Cadastro Cliente</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Seção de menus e opções de canto de tela  -->
+
+
+
+        <!-- Seção de alimentação dos inputs -->
+
+        <!-- Fabricante -->
+
+        <div class="conteudos">
+            <div id="botao-menu">
+                <button id="imagem-menu"><img src="img/menu.png" alt="" class="imagem-menu"></button>
+            </div>
+
+
+
+            <Form id="formulario">
+
+
+
+
+                <div>
+                    <label for="" style="font-size: 18px;">Fabricante</label>
+                    <select id="modelo" name="txtmodelo" style="width: 100px;">
+                        <option></option>
+                        <option>Mocelin</option>
+                        <option>Extang</option>
+                        <option>Protege</option>
+                        <option>Extinpel</option>
+                        <option>Yanes</option>
+                        <option>Kidde</option>
+                        <option>Ecsil</option>
+                        <option>Giffel</option>
+                    </select>
+                </div>
+                <hr>
+
+                <div class="conteudos-seção-de-registro">
+                    <label for="" style="font-size: 18px;">Número</label>
+                    <input type="text" name="txtnumero" id="numero" class="inputs-seção-de-registro">
+                </div>
+                <hr>
+                <div class="conteudos-seção-de-registro">
+                    <label for="" style="font-size: 18px;">Ano de Fab</label>
+                    <input type="text" name="txtanofab" id="anofab" class="inputs-seção-de-registro">
+                </div>
+
+                <hr>
+                <div class="conteudos-seção-de-registro">
+                    <label for="" style="font-size: 18px;">Ret Atual</label>
+                    <input type="text" name="txtreteste" id="reteste" class="inputs-seção-de-registro reteste">
+                </div>
+
+
+
+                <div class="container-selo">
+                    <div>
+                        <input type="number" name="txtselo" id="selo" class="input-selo" placeholder="Selo">
+                    </div>
+                    <!-- <div>
+                            <button type="button" class="botao-Selo-incremento" id="botao-Selo-incremento"><img src="img/novaOS.png" alt="nova-os"></button>
+                        </div>    -->
+                </div>
+
+                <hr>
+
+                <div>
+                    <label for="" style="font-size: 18px;">Norma de F.</label>
+                    <select id="normafabricante" name="txtnorma" style="width: 100px;">
+                        <option></option>
+                        <option>10721</option>
+                        <option>12791</option>
+                        <option>15808</option>
+                        <option>15809</option>
+                        <option>EB 108</option>
+                        <option>EB 109</option>
+                        <option>131211</option>
+                        <option>ISO 1009</option>
+                        <option>ISO 1112</option>
+                        <option>12639</option>
+                        <option>12369</option>
+                        <option>171569</option>
+                        <option>22669</option>
+                    </select>
+                </div>
+
+                <hr>
+                <div>
+                    <label for="" style="font-size: 18px;">Tipo</label>
+                    <select name="txttipo" id="tipo">
+                        <option id="options"></option>
+                        <option>BC</option>
+                        <option>ABC</option>
+                        <option>AP</option>
+                        <option>EP</option>
+                        <option>CO2</option>
+                    </select>
+                </div>
+                <hr>
+                <div>
+                    <label for="" style="font-size: 18px;">Capacidade</label>
+                    <select name="txtcapacidade" id="Capacidade">
+                        <option id="options"></option>
+                        <option>4Kg</option>
+                        <option>6Kg</option>
+                        <option>8Kg</option>
+                        <option>12Kg</option>
+                        <option>20Kg</option>
+                        <option>30Kg</option>
+                        <option>50Kg</option>
+                        <option>10L</option>
+                        <option>50L</option>
+                    </select>
+                </div>
+                <hr>
+                <div>
+                    <label for="" style="font-size: 18px;">Nivel</label>
+                    <select name="txtnivel" id="Capacidade">
+                        <option id="options"></option>
+                        <option id="options">2º</option>
+                        <option id="options">3º</option>
+                        <option id="options">1º Insp.</option>
+                    </select>
+                </div>
+
+
+                <button type="reset" class="botao-de-adicao" id="botao-adicao"
+                    onclick="Add(txtmodelo.value, txtnumero.value, txtanofab.value, txtreteste.value, txtselo.value, txtnorma.value, txttipo.value, txtcapacidade.value, txtnivel.value),RetesteMenorqueAnoAtual(),ContagemProducao(),RetesteMaiorqueAnoAtual()"><img
+                        src="img/novaOS.png" alt="nova-os"></button>
+
+                        <div>
+                            <!-- <a href="acessosrios.html" class="ancora-acessorios"><input type="button" value=" Acessorios" -->
+                                    <!-- id="botão-acessorios"></input></a> -->
+                            
+                            <button type="button" value="Excluir Extintor" id="exclusão" onclick="remover(txtmodelo.value, txtnumero.value, txtanofab.value, txtreteste.value, txtselo.value, txtnorma.value, txttipo.value, txtcapacidade.value, txtnivel.value)">Remover</button>
+                        </div>
+
+                <!-- Estamos trabalhando neste botão em relação ao incremento -->
+
+                                <!-- <div>
+                                    <button type="button" class="botao-Selo-incremento" id="botao-Selo-incremento"><img src="img/novaOS.png" alt="nova-os"></button>
+                                </div>  -->
+            </Form>
+            <hr>
+
+
+
+            <section id="segunda-divisão">
+              
+
+
+
+                <div class="Pesquisar">
+
+                    <input type="search" id="destino-extintor" placeholder="Pesquisar Cilindro" aria-label="Search">
+                    <button type="button" id="botao-lupa-pesquisa-de-selo"><img src="img/lupa.png" alt=""
+                            class="imagem-lupa"></button>
+                    <button id="botao-seta-pesquisa-de-selo"><img src="img/seta.png" alt="" class="imagem-seta"></button>        
+                    <input type="search" id="nova-os" placeholder="Digitar nova OS" aria-label="Search"> <button
+                        type="submit" class="botao-nova-os"><img src="img/novaOS.png" alt="nova-os"></button>
+
+                    <div class="contagem-producao">
+                        <p id="click" style="color: rgb(14, 13, 13);"></p>
+                    </div>
+
+                    <!-- <div > -->
+
+                    <!-- Estamos trabalhando neste input em relação ao incremento -->
+                    <!-- <form action="">
+                    <div class="container-selo">     
+                        <div>
+                            <input type="text" name="txtselo" id="selo"   class="input-selo" placeholder="Selo">
+                        </div>
+                        <div>
+                            <button type="button" class="botao-Selo-incremento" id="botao-Selo-incremento" onclick="Add(txtmodelo.value, txtnumero.value, txtanofab.value, txtreteste.value, txtselo.value, txtnorma.value, txttipo.value, txtcapacidade.value, txtnivel.value)"><img src="img/novaOS.png" alt="nova-os"></button>
+                            <button type="button" class="botao-Selo-incremento" id="botao-Selo-incremento" onclick="Add(txtselo.value)"><img src="img/novaOS.png" alt="nova-os"></button> -->
+                    <!-- </div>
+
+                   </div>
+                </form> -->
+                    <!-- </div> -->
+
+
+                    <!-- segunda seção do formulario -->
+                </div>
+            </section>
+
+
+            <div class="tabela">
+                <div id="dtPessoas">
+                    <table id="cads">
+                        <tbody id="conteudo-tabela">
+                            <thead>
+                                <tr id="tr">
+                                    <th>Modelo Cilindro </th>
+                                    <th id="numero-cilindro">Numero Cilindro </th>
+                                    <th>Ano Fab </th>
+                                    <th class='cor-dobackgorund' value="UR">Ultimo Reteste </th>
+                                    <th id="valueCell">Selo Inmetro </th>
+                                    <th>Norma</th>
+                                    <th>Tipo </th>
+                                    <th>Capacidade </th>
+                                    <th>Nivel </th>
+                                </tr>
+                            </thead>
+                        </tbody>
+
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <div id="copy">
+        <p class="copy"> &copy; Aplicação Desenvolvida por Ezequiel da Silva Vicente </p>
+    </div>
+    <script src="pasta.JS/index.js"></script>
+    <script src="remocao.js"></script>
+    <script src="pasta.JS/Menu.js"></script>
+    <script src="pasta.JS/JanelaModal.js"></script>
+    <script src="pasta.JS/ContagemProducao.js"></script>
+    <script src="pasta.JS/Reteste.js"></script>
+    <script src="pasta.JS/validação.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>
