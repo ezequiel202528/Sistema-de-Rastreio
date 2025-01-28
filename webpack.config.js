@@ -9,13 +9,13 @@ module.exports = {
         }
     },
     entry: {
-        ContagemProducao: './pastaJS/ContagemProducao.js',
-        index:            './pastaJS/index.js',
-        JanelaModal:      './pastaJS/JanelaModal.js',
-        Menu:             './pastaJS/Menu.js',
-        remocao:          './pastaJS/remocao.js',
-        Reteste:          './pastaJS/Reteste.js',
-        validacao:        './pastaJS/validação.js',      
+        ContagemProducao: './src/ContagemProducao.js',
+        index:            './src/index.js',
+        JanelaModal:      './src/JanelaModal.js',
+        Menu:             './src/Menu.js',
+        remocao:          './src/remocao.js',
+        Reteste:          './src/Reteste.js',
+        validacao:        './src/validação.js',      
     },
     mode: 'production',
     module:{
